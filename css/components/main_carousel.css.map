@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "main_carousel.css",
+	"sources": [
+		"../../sass/components/main_carousel.scss"
+	],
+	"names": [],
+	"mappings": "AAAA;;EAEE;AACF,AACC,cADa,CACb,cAAc,CAAC;EACd,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,GAAG;EACX,YAAY,EAAE,IAAI;CAClB"
+}
