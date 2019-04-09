@@ -6,38 +6,23 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="vendor/flickity/flickity.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-        <title>Zadanie 14.1</title>
+        <title>Zadanie 14.2</title>
     </head>
 	<body>
 		<section class="slider">
+			<script id="template-slide" type="x-tmpl-mustache">
+				<div class="carousel-cell" id="slide-{{ index }}" style="background-image: url('{{ image }}');">
+					<div class="container">
+						<h1>{{ title }}</h1>
+						<div class="description">
+							{{{ description }}}
+						</div>
+					</div>
+				</div>
+			</script>
 			<div class="main-carousel">
 				<div class="restart">
 					<button class="btn-restart">Restart</button>
-				</div>
-				<div class="carousel-cell" id="slide-1" style="background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');">
-					<div class="container">
-						<h1>Slajd 1</h1>
-					</div>
-				</div>
-				<div class="carousel-cell" id="slide-2" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');">
-					<div class="container">
-						<h1>Slajd 2</h1>
-					</div>
-				</div>
-				<div class="carousel-cell" id="slide-3" style="background-image: url('https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');">
-					<div class="container">
-						<h1>Slajd 3</h1>
-					</div>
-				</div>
-				<div class="carousel-cell" id="slide-4" style="background-image: url('https://images.unsplash.com/photo-1480506132288-68f7705954bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1586&q=80');">
-					<div class="container">
-						<h1>Slajd 4</h1>
-					</div>
-				</div>
-				<div class="carousel-cell" id="slide-5" style="background-image: url('https://images.unsplash.com/photo-1455165814004-1126a7199f9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');">
-					<div class="container">
-						<h1>Slajd 5</h1>
-					</div>
 				</div>
 			</div>
 			<div class="progress-wrapper">
@@ -48,6 +33,7 @@
 		</section>
 		<script type="text/javascript" src="vendor/flickity/flickity.pkgd.min.js"></script>
 		<script type="text/javascript" src="vendor/flickity/hash.js"></script>
+		<script type="text/javascript" src="vendor/mustache/mustache.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>
