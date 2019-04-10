@@ -92,6 +92,8 @@ window.initMap = function() {
 		let marker = new google.maps.Marker({position: slides[i].coords, map: map});
 		//klikniecie markera
 		marker.addListener('click', function(){
+			//zablokowanie przesuwania mapy
+			panMap = false;
 			//przesuniecie slidera
 			slider.select(i);
 		});
@@ -102,9 +104,16 @@ window.initMap = function() {
 	smoothPanAndZoom(map, 4, slides[slider.selectedIndex].coords);
 }
 
+//zmienna sterujaca czy ma byc przesunieta mapa
+//w przypadku klikniecia na marker przesuwanie mapy jest blokowane
+let panMap = true;
+
 //centrowanie mapy po zmianie slajdu
 slider.on('change', function(index) {
-	smoothPanAndZoom(map, 4, slides[index].coords);
+	//przesuniecie apy jesli nie zalobkowane
+	if(panMap) smoothPanAndZoom(map, 4, slides[index].coords);
+	//odblokowanie przesuwania
+	panMap = true;
 });
 
 var smoothPanAndZoom = function(map, zoom, coords){
